@@ -17,11 +17,20 @@ export const DefaultCardWrapper = styled.article`
 export const DefaultCardImageWrapper = styled.div`
     width: 286px;
     height: 100%;
+    overflow: hidden;
 
     &:hover {
         cursor: pointer;
     }
-    border: 1px solid #000;
+`;
+
+export const DefaultCardImage = styled.img`
+    width: 100%;
+    height: 100%;
+    transition: 0.4s all;
+    &:hover {
+        transform: scale(1.1);
+    }
 `;
 
 export const DefaultCardContentWrapper = styled.div`

@@ -11,6 +11,7 @@ import {
     DefaultCardAvatar,
     DefaultCardNickName,
     DefaultCardUpdatedAt,
+    DefaultCardImage,
 } from './DefaultCard.styled';
 
 type DefaultCardComponentPropsType = {};
@@ -18,7 +19,9 @@ type DefaultCardComponentPropsType = {};
 const DefaultCardComponent: NextComponentType<DefaultCardComponentPropsType> = () => {
     return (
         <DefaultCardWrapper>
-            <DefaultCardImageWrapper>Card</DefaultCardImageWrapper>
+            <DefaultCardImageWrapper>
+                <DefaultCardImage src="/images/ex/card_image1.png" alt="title" />
+            </DefaultCardImageWrapper>
             <DefaultCardContentWrapper>
                 <DefaultCardHeaderContainer>10개</DefaultCardHeaderContainer>
                 <DefaultCardTitleContainer>Amet minim mollit non deserunt ullamco est si</DefaultCardTitleContainer>

@@ -24,7 +24,8 @@
       "types/*": ["types/*"],
       "utils/*": ["utils/*"],
       "styles/*": ["styles/*"],
-      "configs/*": ["configs/*"]
+      "configs/*": ["configs/*"],
+      "asset/*": ["asset/*"]
     },
     "allowSyntheticDefaultImports": true,
     "keyofStringsOnly": true,

@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
-export const media = (device: string, css: string) => {
+export const media = (device: 'phone' | 'tab-port' | 'tab-land' | 'big-desktop', css: string) => {
     if (device === 'phone') {
         return `
             @media only screen and (max-width: 37.5em) {
