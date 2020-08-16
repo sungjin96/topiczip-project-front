@@ -1,7 +1,9 @@
 import { NextComponentType } from 'next';
-import NavComponent from 'components/layout/nav/Nav.component';
+import dynamic from 'next/dynamic';
 import BodyComponent from 'components/layout/body/Body.component';
 import FooterComponent from 'components/layout/footer/Footer.component';
+
+const NavComponent = dynamic(() => import('components/layout/nav/Nav.component'), { ssr: false });
 
 type LayoutPropsType = {};
 

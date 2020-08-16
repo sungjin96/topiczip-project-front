@@ -1,7 +1,16 @@
 import styled from 'styled-components';
 
-export const NavWrapper = styled.nav`
+type NavPropsType = {
+    isShowNav: boolean;
+};
+
+export const NavWrapper = styled.nav<NavPropsType>`
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    transition: 0.3s top;
+    top: ${({ isShowNav }) => (isShowNav ? '0' : '-50px')};
+    background-color: #fff;
+    z-index: 1;
 `;
 
 export const NavContainer = styled.div`

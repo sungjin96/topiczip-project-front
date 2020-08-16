@@ -21,6 +21,7 @@ import {
     IconContainer,
     MessageIcon,
 } from './HomeBigCard.styled';
+import { faClock, faHeart, faCommentAlt } from '@fortawesome/free-solid-svg-icons';
 
 type HomeBigCardComponentPropsType = {};
 
@@ -46,16 +47,16 @@ const HomeBigCardComponent: FC<HomeBigCardComponentPropsType> = () => {
                 </BigCardBodyContainer>
                 <BigCardFooterContainer>
                     <CardDateContainer>
-                        <DateIcon />
+                        <DateIcon icon={faClock} />
                         <UpdatedAt>February 28, 2020</UpdatedAt>
                     </CardDateContainer>
                     <CardStateContainer>
                         <IconContainer>
-                            <MessageIcon />
+                            <MessageIcon icon={faCommentAlt} />
                             <Count>12</Count>
                         </IconContainer>
                         <IconContainer>
-                            <HeartIcon />
+                            <HeartIcon icon={faHeart} />
                             <Count>2.4k</Count>
                         </IconContainer>
                     </CardStateContainer>

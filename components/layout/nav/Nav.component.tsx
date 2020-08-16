@@ -8,12 +8,25 @@ import {
     NavNotificationContainer,
     NavSearchContainer,
 } from './Nav.styled';
+import { useState } from 'react';
 
 type NavComponentPropsType = {};
 
 const NavComponent: NextComponentType<NavComponentPropsType> = () => {
+    const [isShowNav, setIsShowNav] = useState(true);
+    let prevScrollPos = pageYOffset;
+
+    onscroll = () => {
+        const currentScrollPos = pageYOffset;
+        if (prevScrollPos > currentScrollPos && !isShowNav) {
+            setIsShowNav(true);
+        } else if (prevScrollPos <= currentScrollPos && isShowNav) {
+            setIsShowNav(false);
+        }
+        prevScrollPos = currentScrollPos;
+    };
     return (
-        <NavWrapper>
+        <NavWrapper isShowNav={isShowNav}>
             <NavContainer>
                 <NavLogoContainer>TOPIC.zip</NavLogoContainer>
                 <NavMenuContainer>
