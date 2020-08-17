@@ -57,6 +57,7 @@ export const Avata = styled.img`
 
 export const AuthorName = styled.p`
     transition: 0.2s color;
+    font-size: 1.1rem;
 
     &:hover {
         cursor: pointer;
@@ -66,10 +67,9 @@ export const AuthorName = styled.p`
 
 export const CardTitle = styled.h3`
     display: block;
-    font-size: ${({ theme }) => theme.size.h3};
-    font-family: 'Merriweather', serif;
+    font-size: ${({ theme }) => theme.size.h4};
     font-weight: bold;
-    padding-bottom: 18px;
+    padding-bottom: 10px;
     transition: 0.2s color;
     &:hover {
         cursor: pointer;
@@ -82,7 +82,7 @@ export const BodyContainer = styled.div``;
 export const CardContent = styled.p`
     flex: 1;
     font-size: ${({ theme }) => theme.size.h6};
-    font-family: 'Merriweather', serif;
+    color: ${({ theme }) => theme.color.lightGray};
     font-weight: 300;
     line-height: 20px;
 `;
@@ -93,6 +93,7 @@ export const FooterContainer = styled.div`
     justify-content: space-between;
     color: ${({ theme }) => theme.color.primary};
     font-size: 14px;
+    margin-top: 18px;
 `;
 
 export const CardDateContainer = styled.div`

@@ -4,6 +4,7 @@ export const SideNavContainer = styled.div`
     position: sticky;
     top: 40px;
     right: 0;
+    height: 95%;
     width: 328px;
 `;
 
@@ -43,4 +44,6 @@ export const SideNavMoreButton = styled.a`
     }
 `;
 
-export const SideNavContentContainer = styled.div``;
+export const SideNavContentContainer = styled.div`
+    padding-top: 6px;
+`;

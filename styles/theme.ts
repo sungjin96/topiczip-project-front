@@ -18,6 +18,7 @@ const theme: DefaultTheme = {
         black: '#000000',
 
         gray: '#888',
+        lightGray: 'rgba(0, 0, 0, 0.54)',
 
         line: '#B7B0B0',
     },

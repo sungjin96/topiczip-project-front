@@ -5,6 +5,7 @@ type TagPropsType = {
 };
 
 export const TagContainer = styled.div<TagPropsType>`
+    margin: 10px 3px 0 3px;
     align-items: center;
     display: inline-flex;
     justify-content: center;

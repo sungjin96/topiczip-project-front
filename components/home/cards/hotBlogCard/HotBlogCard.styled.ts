@@ -38,7 +38,9 @@ export const AuthorName = styled.h4`
     }
 `;
 
-export const Content = styled.p``;
+export const Content = styled.p`
+    color: ${({ theme }) => theme.color.lightGray};
+`;
 
 export const DateContainer = styled.div`
     display: flex;

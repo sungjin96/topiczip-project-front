@@ -9,7 +9,6 @@ export const DefaultCardWrapper = styled.article`
     color: ${({ theme }) => theme.color.info};
     margin-bottom: 18px;
     transition: 0.4s all;
-    font-family: 'Merriweather', serif;
 
     &:hover {
         box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), -1px -1px 0 rgba(0, 0, 0, 0.1);
@@ -60,7 +59,7 @@ export const Icon = styled(FontAwesomeIcon)`
 export const Count = styled.p``;
 
 export const DefaultCardTitleContainer = styled.p`
-    font-size: ${(props) => props.theme.size.h3};
+    font-size: ${(props) => props.theme.size.h4};
     line-height: 30px;
     font-weight: bold;
     padding-bottom: 10px;
@@ -76,7 +75,7 @@ export const DefaultCardTitleContainer = styled.p`
 export const DefaultCardBodyContainer = styled.div`
     flex: 1;
     font-size: ${(props) => props.theme.size.h6};
-    font-weight: 300;
+    color: ${({ theme }) => theme.color.lightGray};
     line-height: 20px;
 `;
 
