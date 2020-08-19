@@ -1197,6 +1197,18 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@ckeditor/ckeditor5-build-balloon@^21.0.0":
+  version "21.0.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-build-balloon/-/ckeditor5-build-balloon-21.0.0.tgz#792c03ba9370668979433bd46847ff926d3b362a"
+  integrity sha512-yBx3XErBc+vo8/znjVch+tMjCUEWVMxPXNSmTgHHLS0CKCgrI9LeaJNihEZgXHHh+LXX5FKLGZiADwK2sOSx9Q==
+
+"@ckeditor/ckeditor5-react@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-react/-/ckeditor5-react-2.1.0.tgz#f612546a5a328899a436d71b72ffd632600049e8"
+  integrity sha512-rlHjRKhwP9tNK0Yj2UJShL14mRfxLPgJ+Pv6zTv/Mvmd4wrwGnJf+5ybOAGK92S02hP1cXH+9km+PRO1b4V+ng==
+  dependencies:
+    prop-types "^15.6.1"
+
 "@emotion/is-prop-valid@^0.8.8":
   version "0.8.8"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.8.tgz#db28b1c4368a259b60a97311d6a952d4fd01ac1a"
@@ -1368,6 +1380,16 @@
     "@svgr/plugin-jsx" "^5.4.0"
     "@svgr/plugin-svgo" "^5.4.0"
     loader-utils "^2.0.0"
+
+"@types/@ckeditor/ckeditor5-build-balloon":
+  version "19.0.0"
+  resolved "https://codeload.github.com/ckeditor/ckeditor5-build-balloon/tar.gz/3b31d8076448e461a6c4d00c923ad3e60d14aacb"
+
+"@types/@ckeditor/ckeditor5-react":
+  version "2.1.0"
+  resolved "https://codeload.github.com/ckeditor/ckeditor5-react/tar.gz/cabddc95261e49adebfc77ff4f2168767f66995a"
+  dependencies:
+    prop-types "^15.7.2"
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
@@ -4486,7 +4508,7 @@ prop-types-exact@1.2.0:
     object.assign "^4.1.0"
     reflect.ownkeys "^0.2.0"
 
-prop-types@15.7.2, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@15.7.2, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==

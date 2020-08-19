@@ -23,7 +23,11 @@ export const NavContainer = styled.div`
     justify-content: space-between;
 `;
 
-export const NavLogoContainer = styled.div``;
+export const NavLogoContainer = styled.div`
+    &:hover {
+        cursor: pointer;
+    }
+`;
 
 export const NavMenuContainer = styled.ul`
     display: flex;
@@ -32,10 +36,18 @@ export const NavMenuContainer = styled.ul`
 
 export const NavSearchContainer = styled.li`
     margin-left: 22px;
+
+    &:hover {
+        cursor: pointer;
+    }
 `;
 
 export const NavNotificationContainer = styled.li`
     margin-left: 22px;
+
+    &:hover {
+        cursor: pointer;
+    }
 `;
 
 export const DetailMenuContainer = styled.ul`
@@ -48,6 +60,10 @@ export const DetailMenuContainer = styled.ul`
     transform: translateX(-50%);
     transition: 0.4s top;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        cursor: pointer;
+    }
 `;
 
 export const DetailMenuProfileContainer = styled.li`
@@ -64,7 +80,7 @@ export const ProfileNickName = styled.p`
     margin-top: 4px;
 `;
 
-export const DetailMenuItem = styled.li`
+export const DetailMenuItem = styled.a`
     padding: 7px 14px;
     display: flex;
     font-size: 16px;

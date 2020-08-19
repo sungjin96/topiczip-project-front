@@ -1,4 +1,5 @@
 import { NextComponentType } from 'next';
+import Link from 'next/link';
 import {
     NavLogoContainer,
     NavContainer,
@@ -37,7 +38,11 @@ const NavComponent: NextComponentType<NavComponentPropsType> = () => {
     return (
         <NavWrapper isShowNav={isShowNav}>
             <NavContainer>
-                <NavLogoContainer>TOPIC.zip</NavLogoContainer>
+                <NavLogoContainer>
+                    <Link href="/">
+                        <a>TOPIC.zip</a>
+                    </Link>
+                </NavLogoContainer>
                 <NavMenuContainer>
                     <NavSearchContainer>검색</NavSearchContainer>
                     <NavNotificationContainer>알림</NavNotificationContainer>
@@ -53,10 +58,12 @@ const NavComponent: NextComponentType<NavComponentPropsType> = () => {
                                 <Icon icon={faHome} />
                                 <MenuName>홈</MenuName>
                             </DetailMenuItem>
-                            <DetailMenuItem>
-                                <Icon icon={faPenFancy} />
-                                <MenuName>이야기 작성</MenuName>
-                            </DetailMenuItem>
+                            <Link href="/write">
+                                <DetailMenuItem>
+                                    <Icon icon={faPenFancy} />
+                                    <MenuName>이야기 작성</MenuName>
+                                </DetailMenuItem>
+                            </Link>
                             <DetailMenuItem>
                                 <Icon icon={faListOl} />
                                 <MenuName>내 이야기</MenuName>
@@ -66,10 +73,12 @@ const NavComponent: NextComponentType<NavComponentPropsType> = () => {
                                 <MenuName>쪽지</MenuName>
                             </DetailMenuItem>
                             <hr />
-                            <DetailMenuItem>
-                                <Icon icon={faCog} />
-                                <MenuName>설정</MenuName>
-                            </DetailMenuItem>
+                            <Link href="/users/config">
+                                <DetailMenuItem>
+                                    <Icon icon={faCog} />
+                                    <MenuName>설정</MenuName>
+                                </DetailMenuItem>
+                            </Link>
                             <DetailMenuItem>
                                 <Icon icon={faSignOutAlt} />
                                 <MenuName>로그아웃</MenuName>

@@ -5,6 +5,7 @@ type ButtonComponentPropsType = {
     size?: 'small' | 'big';
     type?: 'inline';
     color?: string;
+    onClick?: any;
 };
 
 const Button: FC<ButtonComponentPropsType> = ({ children, ...props }) => {
