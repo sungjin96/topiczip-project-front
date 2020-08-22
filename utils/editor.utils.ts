@@ -1,74 +1,143 @@
-import Embed from '@editorjs/embed';
-import Table from '@editorjs/table';
-import Paragraph from '@editorjs/paragraph';
-import List from '@editorjs/list';
-import Warning from '@editorjs/warning';
-import Code from '@editorjs/code';
-import LinkTool from '@editorjs/link';
-import Image from '@editorjs/image';
-import Raw from '@editorjs/raw';
-import Header from '@editorjs/header';
-import Quote from '@editorjs/quote';
-import Marker from '@editorjs/marker';
-import CheckList from '@editorjs/checklist';
-import Delimiter from '@editorjs/delimiter';
-import InlineCode from '@editorjs/inline-code';
-import SimpleImage from '@editorjs/simple-image';
+import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
+import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
+import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
+import Link from '@ckeditor/ckeditor5-link/src/link';
+import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
+import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
+import Heading from '@ckeditor/ckeditor5-heading/src/heading';
+import Font from '@ckeditor/ckeditor5-font/src/font';
+import Image from '@ckeditor/ckeditor5-image/src/image';
+import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
+import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
+import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
+import List from '@ckeditor/ckeditor5-list/src/list';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
+import Table from '@ckeditor/ckeditor5-table/src/table';
+import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import Indent from '@ckeditor/ckeditor5-indent/src/indent';
+import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock';
+import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
+import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock';
+import CodeBlockCommand from '@ckeditor/ckeditor5-code-block/src/codeblockcommand';
+import CodeBlockEditing from '@ckeditor/ckeditor5-code-block/src/codeblockediting';
+import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 
-export const EDITOR_JS_TOOLS = {
-    embed: {
-        class: Embed,
-        inlineToolbar: false,
-        config: {
-            services: {
-                youtube: true,
-                coub: true,
+export const EditorConfig = {
+    plugins: [
+        Essentials,
+        Paragraph,
+        Bold,
+        Italic,
+        Heading,
+        Indent,
+        IndentBlock,
+        Underline,
+        Strikethrough,
+        BlockQuote,
+        Font,
+        Alignment,
+        List,
+        Link,
+        MediaEmbed,
+        PasteFromOffice,
+        Image,
+        ImageStyle,
+        ImageToolbar,
+        ImageUpload,
+        ImageResize,
+        Base64UploadAdapter,
+        Table,
+        TableToolbar,
+        TextTransformation,
+        CodeBlock,
+        CodeBlockEditing,
+        CodeBlockCommand,
+        HorizontalLine,
+    ],
+    toolbar: [
+        'heading',
+        '|',
+        'bold',
+        'italic',
+        'underline',
+        'strikethrough',
+        '|',
+        'fontSize',
+        'fontColor',
+        'fontBackgroundColor',
+        '|',
+        'alignment',
+        'outdent',
+        'indent',
+        'bulletedList',
+        'numberedList',
+        'horizontalLine',
+        'blockQuote',
+        'codeBlock',
+        '|',
+        'link',
+        'insertTable',
+        'imageUpload',
+        'mediaEmbed',
+        '|',
+        'undo',
+        'redo',
+    ],
+
+    heading: {
+        options: [
+            {
+                model: 'paragraph',
+                view: 'p',
+                title: '본문',
+                class: 'ck-heading_paragraph',
             },
-        },
+            {
+                model: 'heading1',
+                view: 'h1',
+                title: '헤더1',
+                class: 'ck-heading_heading1',
+            },
+            {
+                model: 'heading2',
+                view: 'h2',
+                title: '헤더2',
+                class: 'ck-heading_heading2',
+            },
+            {
+                model: 'heading3',
+                view: 'h3',
+                title: '헤더3',
+                class: 'ck-heading_heading3',
+            },
+        ],
+    },
+    fontSize: {
+        options: [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 25, 27, 29, 31, 33, 35],
+    },
+    alignment: {
+        options: ['justify', 'left', 'center', 'right'],
     },
     table: {
-        class: Table,
-        inlineToolbar: true,
+        contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells'],
     },
-    paragraph: {
-        class: Paragraph,
-        inlineToolbar: true,
+    image: {
+        resizeUnit: 'px',
+        toolbar: ['imageStyle:alignLeft', 'imageStyle:full', 'imageStyle:alignRight', '|', 'imageTextAlternative'],
+        styles: ['full', 'alignLeft', 'alignRight'],
     },
-    list: {
-        class: List,
-        inlineToolbar: true,
-    },
-    warning: {
-        class: Warning,
-        inlineToolbar: true,
-    },
-    code: Code,
-    linkTool: {
-        class: LinkTool,
-        inlineToolbar: true,
-        config: {
-            endpoint: 'http://localhost:8008/fetchUrl', // Your backend endpoint for url data fetching
+    typing: {
+        transformations: {
+            remove: ['enDash', 'emDash', 'oneHalf', 'oneThird', 'twoThirds', 'oneForth', 'threeQuarters'],
         },
     },
-    image: Image,
-    raw: {
-        class: Raw,
-        inlineToolbar: true,
+    ckfinder: {
+        uploadUrl: 'http://api.dev.mustrip.io/meetup/upload/files/',
     },
-    header: {
-        class: Header,
-        inlineToolbar: true,
-    },
-    quote: {
-        class: Quote,
-        inlineToolbar: true,
-    },
-    marker: {
-        class: Marker,
-        inlineToolbar: true,
-    },
-    checklist: CheckList,
-    delimiter: Delimiter,
-    inlineCode: InlineCode,
-    simpleImage: SimpleImage,
 };
